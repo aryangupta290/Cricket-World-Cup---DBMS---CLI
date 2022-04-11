@@ -8,8 +8,10 @@ Team Members :
 
 Setup :
 You must have MySQL Server installed. To do so,
+```
 sudo apt-get update
 sudo apt-get install mysql-server
+```
 When installing the MySQL server for the first time, you will be prompted for a root password with which you can later log in. If for some reason, you aren't asked for the password during installation, try prepending the start command with sudo and provide your root password. You can then set a root password or create a new user.
 
 
