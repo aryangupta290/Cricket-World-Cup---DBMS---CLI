@@ -24,5 +24,17 @@ If you wish to create a new user,
 ```
 CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 ```
+To grant access and modification privileges to this new user, run
+```
+GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+FLUSH PRIVILEGES;
+```
+Create a new database for the eCommerce website, using the following SQL command, and then set it up.
+```
+CREATE DATABASE <database_name>;
+USE <database_name>;
+```
+To initialise the database with the tables required, run
+source CREATE_TABLES.sql
 
 
