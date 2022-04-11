@@ -78,6 +78,16 @@ Delete Fucntions :
 4) ```deletebatstat()``` (To delete the batting statistics of a player from the database ) .
 5) ```deletebowlstat()``` (To delete the bowling statistics of a player from the database  ) .
 
+Data Retrival Functions : 
+
+1)```viewmatches()``` ( To view details of all the matches in the database ) .                         
+2) ```viewplayers()``` ( To view details of all the players in the database ) .                      
+3) ```viewvenue()``` ( To view details of all the venues in the database ) .                         
+4) ```viewbatstat()``` ( To view details of the batting statistics of all the players in the database ) .           
+5) ```viewbowlstat()``` ( To view details of the bowling statistics of all the players in the database  ) .           
+
+
+
 
 
 
