@@ -86,6 +86,14 @@ Data Retrival Functions :
 4) ```viewbatstat()``` ( To view details of the batting statistics of all the players in the database ) .           
 5) ```viewbowlstat()``` ( To view details of the bowling statistics of all the players in the database  ) .           
 
+User functions : 
+
+1) ```userfuncsplayers()``` ( Given a team id , prints all the players of that team ).
+2) ```userfuncsresults()``` ( Gets results of all the macthes fo a particular team id ) .
+3) ```userfuncavg()``` ( Prints avg runs scored over all  matches ) .
+4) ```userfuncszah()``` (Gets all the players starting with name "ZAH").
+5) ```userfunchighscore()``` (Prints the highest runs scored by a player of a particular team ) 
+
 
 
 
