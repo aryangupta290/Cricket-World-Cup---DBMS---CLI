@@ -35,6 +35,8 @@ CREATE DATABASE <database_name>;
 USE <database_name>;
 ```
 To initialise the database with the tables required, run
+```
 source CREATE_TABLES.sql
-
+```
+4. 
 
