@@ -14,4 +14,15 @@ sudo apt-get install mysql-server
 ```
 When installing the MySQL server for the first time, you will be prompted for a root password with which you can later log in. If for some reason, you aren't asked for the password during installation, try prepending the start command with sudo and provide your root password. You can then set a root password or create a new user.
 
+To start MySQL, run
+```
+mysql -u <user_name> -p
+```
+You will then be prompted for the user's password.
+
+If you wish to create a new user,
+```
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+```
+
 
