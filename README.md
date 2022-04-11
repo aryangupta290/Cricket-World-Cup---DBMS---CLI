@@ -55,11 +55,11 @@ Functions :
 
 Insertion Functions : 
 
-1)```insertmatches()``` ( To insert the details of a match in the database ) .
-2) ```insertplayer()``` ( To insert the details of a player in the database ) . 
-3) ```insertvenue()``` ( To insert the details of a venue in the database ) .
-4) ```insertbatstat()``` ( To insert the batting statistics of a player in the database ) .
-5) ```insertbowlstat()``` ( To insert the bowling statistics of a player in the database ) .
+1)```insertmatches()``` ( To insert the details of a match in the database ) .                         
+2) ```insertplayer()``` ( To insert the details of a player in the database ) .                      
+3) ```insertvenue()``` ( To insert the details of a venue in the database ) .                         
+4) ```insertbatstat()``` ( To insert the batting statistics of a player in the database ) .           
+5) ```insertbowlstat()``` ( To insert the bowling statistics of a player in the database ) .           
 
 Update Functions :
 
