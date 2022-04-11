@@ -768,9 +768,9 @@ def dispatchuserfuncs():
             
 while(1):
     conn = pymysql.connect(host="localhost",
-                              user="dnaproject",
+                              user="",
                               port=3306,
-                              password="Arjunorz123#",
+                              password="",
                               database='dna',cursorclass=pymysql.cursors.DictCursor)
     if(conn.open):
         print("Connected")
