@@ -38,5 +38,16 @@ To initialise the database with the tables required, run
 ```
 source CREATE_TABLES.sql
 ```
-4. 
+4. To run the CLI ,  change your directory to the cloned folder and run the following command:
+```
+python3 python.py
+```
+Meanwhile also update the required fields in the following piece of code 
+```
+ conn = pymysql.connect(host="localhost",
+                              user="",
+                              port=3306,
+                              password="",
+                              database='dna',cursorclass=pymysql.cursors.DictCursor)
+```
 
