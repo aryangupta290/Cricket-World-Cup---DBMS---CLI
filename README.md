@@ -55,7 +55,7 @@ Functions :
 
 Insertion Functions : 
 
-1) insertmactches ( To insert the details of a match in the database ) .
+1)``` insertmatches()``` ( To insert the details of a match in the database ) .
 2) insertplayer ( To insert the details of a player in the database ) .
 3) insertvenue ( To insert the details of a venue in the database ) .
 4) insertbatstat ( To insert the batting statistics of a player in the database ) .
@@ -63,7 +63,7 @@ Insertion Functions :
 
 Update Functions :
 
-1) updatemactches ( To update the details of an existing match in the database ) .
+1) updatematches ( To update the details of an existing match in the database ) .
 2) updateplayers (  To update the details of an existing player in the database ) .
 3) updatevenue (  To update the details of an existing venue in the database  ) .
 4) updatebatstat ( To update the batting statistics of an existing match in the database ) .
@@ -72,7 +72,7 @@ Update Functions :
 Delete Fucntions : 
 
 
-1) deletemactches ( To delete a match from the database ) .
+1) deletematches ( To delete a match from the database ) .
 2) deleteplayers ( To delete a player from the database ) .
 3) deletevenues ( To delete a venue from the database ) .
 4) deletebatstat (To delete the batting statistics of a player from the database ) .
