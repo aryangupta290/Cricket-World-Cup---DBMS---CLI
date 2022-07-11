@@ -1,98 +1,103 @@
-This is a CLI for a T-20 Cricket World Cup tournament . Users can interact with it to insert, delete and update data in the database, and view the results of certain predefined functions that provides insight about the players and analysis of the matches played.
+# Team Members 
 
-Team Members :
+* Srikar Bhavesh Desu
+* Ayush Agarwal
+* Aryan Gupta
 
-1. Srikar Bhavesh Desu
-2. Ayush Agarwal
-3. Aryan Gupta
+# SETUP
 
-Setup :
-You must have MySQL Server installed. To do so,
+* To install MySQL , use the following command  
 ```
-sudo apt-get update
-sudo apt-get install mysql-server
+$ sudo apt-get update  
+$ sudo apt-get install mysql-server
 ```
-When installing the MySQL server for the first time, you will be prompted for a root password with which you can later log in. If for some reason, you aren't asked for the password during installation, try prepending the start command with sudo and provide your root password. You can then set a root password or create a new user.
+* When installing the MySQL server for the first time, you will be prompted for a root password with which you can later log in. If for some reason, you aren't asked for the password during installation, try prepending the start command with sudo and provide your root password. You can then set a root password or create a new user.  
+* To start MySQL use, run  
+```
+$ mysql -u <user_name> -p
+```
+* You will then be prompted for the user's password.  
 
-To start MySQL, run
+* If you wish to create a new user,  
 ```
-mysql -u <user_name> -p
+$ CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 ```
-You will then be prompted for the user's password.
-
-If you wish to create a new user,
+* To grant access and modification privileges to this new user, run
 ```
-CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+$ GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+$ FLUSH PRIVILEGES;
 ```
-To grant access and modification privileges to this new user, run
+* Create a new database for the eCommerce website, using the following SQL command, and then set it up.
 ```
-GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
-FLUSH PRIVILEGES;
+$ CREATE DATABASE <database_name>;
+$ USE <database_name>;
 ```
-Create a new database for the eCommerce website, using the following SQL command, and then set it up.
+* To initialise the database with the tables required, run
 ```
-CREATE DATABASE <database_name>;
-USE <database_name>;
+$ source CREATE_TABLES.sql
 ```
-To initialise the database with the tables required, run
+* To run the CLI ,  change your directory to the cloned folder and run the following command:
 ```
-source CREATE_TABLES.sql
+$ python3 python.py
 ```
-4. To run the CLI ,  change your directory to the cloned folder and run the following command:
+* Meanwhile also update the required fields in the following piece of code 
 ```
-python3 python.py
-```
-Meanwhile also update the required fields in the following piece of code 
-```
- conn = pymysql.connect(host="localhost",
+$ conn = pymysql.connect(host="localhost",
                               user="",
                               port=3306,
                               password="",
                               database='dna',cursorclass=pymysql.cursors.DictCursor)                             
 ```
 
-Functions :
+# INTRODUCTION
 
-Insertion Functions : 
-
-1)```insertmatches()``` ( To insert the details of a match in the database ) .                         
-2) ```insertplayer()``` ( To insert the details of a player in the database ) .                      
-3) ```insertvenue()``` ( To insert the details of a venue in the database ) .                         
-4) ```insertbatstat()``` ( To insert the batting statistics of a player in the database ) .           
-5) ```insertbowlstat()``` ( To insert the bowling statistics of a player in the database ) .           
-
-Update Functions :
-
-1) ```updatematches()``` ( To update the details of an existing match in the database ) .
-2) ```updateplayers()``` (  To update the details of an existing player in the database ) .
-3) ```updatevenue()``` (  To update the details of an existing venue in the database  ) .
-4) ```updatebatstat()``` ( To update the batting statistics of an existing match in the database ) .
-5) ```updatebowlstat()``` ( To update the bowling statistics of an existing match in the database ) .
-
-Delete Fucntions : 
+This is a CLI for a T-20 Cricket World Cup tournament where users can interact with it to insert, delete and update data in the database, and view the results of certain predefined functions that provides insight about the players and analysis of the matches played.
 
 
-1) ```deletematches()``` ( To delete a match from the database ) .
-2) ```deleteplayers()``` ( To delete a player from the database ) .
-3) ```deletevenues()``` ( To delete a venue from the database ) .
-4) ```deletebatstat()``` (To delete the batting statistics of a player from the database ) .
-5) ```deletebowlstat()``` (To delete the bowling statistics of a player from the database  ) .
 
-Data Retrival Functions : 
 
-1)```viewmatches()``` ( To view details of all the matches in the database ) .                         
-2) ```viewplayers()``` ( To view details of all the players in the database ) .                      
-3) ```viewvenue()``` ( To view details of all the venues in the database ) .                         
-4) ```viewbatstat()``` ( To view details of the batting statistics of all the players in the database ) .           
-5) ```viewbowlstat()``` ( To view details of the bowling statistics of all the players in the database  ) .           
+# FEATURES
 
-User functions : 
+## Insertion Functions
 
-1) ```userfuncsplayers()``` ( Given a team id , prints all the players of that team ).
-2) ```userfuncsresults()``` ( Gets results of all the macthes fo a particular team id ) .
-3) ```userfuncavg()``` ( Prints avg runs scored over all  matches ) .
-4) ```userfuncszah()``` (Gets all the players starting with name "ZAH").
-5) ```userfunchighscore()``` (Prints the highest runs scored by a player of a particular team ) 
+* ```insertmatches()``` ( To insert the details of a match in the database )                            
+*  ```insertplayer()``` ( To insert the details of a player in the database )                        
+* ```insertvenue()``` ( To insert the details of a venue in the database )                           
+*  ```insertbatstat()``` ( To insert the batting statistics of a player in the database )             
+* ```insertbowlstat()``` ( To insert the bowling statistics of a player in the database )             
+
+## Update Functions
+
+* ```updatematches()``` ( To update the details of an existing match in the database )  
+* ```updateplayers()``` (  To update the details of an existing player in the database )  
+* ```updatevenue()``` (  To update the details of an existing venue in the database  )  
+* ```updatebatstat()``` ( To update the batting statistics of an existing match in the database )  
+* ```updatebowlstat()``` ( To update the bowling statistics of an existing match in the database )  
+
+## Delete Functions  
+
+
+* ```deletematches()``` ( To delete a match from the database )  
+* ```deleteplayers()``` ( To delete a player from the database )   
+* ```deletevenues()``` ( To delete a venue from the database )  
+* ```deletebatstat()``` (To delete the batting statistics of a player from the database )  
+* ```deletebowlstat()``` (To delete the bowling statistics of a player from the database  )  
+
+## Data Retrival Functions  
+
+* ```viewmatches()``` ( To view details of all the matches in the database )                       
+*  ```viewplayers()``` ( To view details of all the players in the database )                        
+* ```viewvenue()``` ( To view details of all the venues in the database )                        
+* ```viewbatstat()``` ( To view details of the batting statistics of all the players in the database )           
+* ```viewbowlstat()``` ( To view details of the bowling statistics of all the players in the database  )             
+
+## User functions  
+
+* ```userfuncsplayers()``` ( Given a team id , prints all the players of that team )  
+* ```userfuncsresults()``` ( Gets results of all the macthes fo a particular team id )  
+* ```userfuncavg()``` ( Prints avg runs scored over all  matches )  
+* ```userfuncszah()``` (Gets all the players starting with name "ZAH")  
+* ```userfunchighscore()``` (Prints the highest runs scored by a player of a particular team )  
 
 
 
